@@ -13,6 +13,12 @@ $ListeRepertoire = Get-ChildItem -Path C:\Users -Exclude Public
 foreach ($repertoires in $ListeRepertoire)
       {
         $nomuser = $repertoires.Name
+        if ((test-path "\\SRVACME\sav$\$nompc") -eq $true) 
+        { Write-Host "repertoire existe"}
+        else 
+        {
+          Write-host " creation repertoire $nompc du nom de l'ordinateur sauvegardé"
+        }
         Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\datapc \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\data\robo1.log /TEE " 
         #vrai ligne de commande
         #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Documents \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\data\robo1.log /TEE " 
