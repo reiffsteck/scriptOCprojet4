@@ -14,16 +14,31 @@ foreach ($repertoires in $ListeRepertoire)
       {
         $nomuser = $repertoires.Name
         if ((test-path "\\SRVACME\sav$\$nompc") -eq $true) 
-        { Write-Host "repertoire existe"}
+          { 
+            Write-Host "repertoire existe"
+            Write-Output "\\SRVACME\sav$\$nompc"
+
+            if ((test-path "\\SRVACME\sav$\$nompc\$nomuser") -eq $true)
+            { 
+                Write-Output "repertoire utilisateur existe"
+            }
+            
+            else 
+            {
+            Write-Output "creation repertoire $nomuser"
+            New-Item \\SRVACME\sav$\$nompc\$nomuser -ItemType Directory -Force
+            }
+          }
         else 
-        {
-          Write-host " creation repertoire $nompc du nom de l'ordinateur sauvegardé"
-          New-item \\SRVACME\sav$\$nompc -ItemType Directory -Force 
-        }
+          {
+            Write-host " creation repertoire $nompc du nom de l'ordinateur sauvegardé"
+            New-item \\SRVACME\sav$\$nompc -ItemType Directory -Force 
+            New-Item \\SRVACME\sav$\$nompc\$nomuser -ItemType Directory -Force
+          }
         #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\datapc \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\robo1.log /TEE " 
         #vrai ligne de commande
-        Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Documents \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\robo1.log /TEE " 
-        Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Favoris \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\robo1.log /TEE " 
+        Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Documents \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\$nompc.log /TEE " 
+        #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Favoris \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\$nompc.log /TEE " 
 
       }
 
