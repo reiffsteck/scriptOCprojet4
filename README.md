@@ -10,6 +10,7 @@ création d'un répertoire caché sur un serveur \\SRVACME à la racine de préf
 ce qui donne \\SRVACME\sav$
 PC sous Windows 10 Pro
 Utilisation de Robocopy pour effectuer la sauvegarde
+Utilistion du planificateur de taches pour lancer le script à une heure donnée
 
 # Installation / Explication 
 étapes pour installer le script
@@ -25,10 +26,14 @@ Le répertoire est sur le serveur \\SRVACME\sav$\...
 
 Lancement de Robocopy avec les arguments suivants:
 copie du répertoire Documents de l'utilisateur sur le serveur 
-horodatage, chemin d'accès  et résultat détaillédans un journal sous 
+horodatage, chemin d'accès  et résultat détaillédans un journal sous \\SRVACME\sav$
+le fichier de log porte le nom du PC sauvegardé, et il est incrémenté pour garder un historique sur plusieurs jours
 
 # Démarrage
 comment on lance le script
+./scrip4.ps1 pour un lancement en manuel
+Pas d'argumentation à préciser 
+Les seuls modifications doivent etre l'heure , date de lancmeent. Il est de base fait pour etre excécuter par le planificateur de taches
 
 # Fabriqué 
 PowerShell
