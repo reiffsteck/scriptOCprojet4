@@ -6,7 +6,8 @@ Ce script a été réalisé dans le cadre d'un projet "script 4" projet 7 pour O
 
 # Pré-requis
 serveur Windows 2019 avec Active Directory 
-création d'un répertoire caché sur un serveur \\SRVACME à la racine de préférence ,ce qui donne \\SRVACME\sav$
+création d'un répertoire caché sur un serveur \\SRVACME à la racine de préférence ,
+ce qui donne \\SRVACME\sav$
 PC sous Windows 10 Pro
 Utilisation de Robocopy pour effectuer la sauvegarde
 
