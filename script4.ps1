@@ -16,13 +16,7 @@ $ListeRepertoire = Get-ChildItem -Path C:\Users -Exclude Public | Select Name
 foreach ($repertoires in $ListeRepertoire)
       {
         $nomuser = $repertoires.Name
-        Write-Host "coucou"
-        Write-Host $ListeRepertoire
-        Write-Host $repertoires
-        Write-Host $nomuser
-        Write-Host $nompc
-
-                if ((test-path "\\SRVACME\sav$\$nompc") -eq $true) 
+        if ((test-path "\\SRVACME\sav$\$nompc") -eq $true) 
           { 
           
             Write-Host "repertoire existe"
@@ -48,8 +42,8 @@ foreach ($repertoires in $ListeRepertoire)
         
         #lancement de robocopy et sauvegarde de Documents
         # la deuxième ligne peut servir pour sauvegarder les Favoris, au choix selon les cas
-       Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Documents\ \\SRVACME\sav$\$nompc\$nomuser\Documents /V /FP /TS /LOG+:\\SRVACME\sav$\$nompc.log /TEE " 
-        #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Favoris \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\$nompc.log /TEE " 
+        Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Documents\ \\SRVACME\sav$\$nompc\$nomuser\Documents /V /FP /TS /LOG+:\\SRVACME\sav$\$nompc.log /TEE " 
+        #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Favoris \\SRVACME\sav$\$nompc\$nomuser\Favoris /copy:DAT /E /TS /FP /V /LOG+:\\SRVACME\sav$\$nompc.log /TEE " 
 
       }
 
