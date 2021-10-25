@@ -23,6 +23,7 @@ Cela permet de ne pas oublier d'utilisateur.
 Boucle ForEach pour excécuter un test de validation de l'existence des répertoires de sauvegarde, sur le serveur \\SRVACME
 Si le test renvoi False , cela provoque la création du répertoire manquant
 Le répertoire est sur le serveur \\SRVACME\sav$\...
+Le répertoire est caché.
 
 Lancement de Robocopy avec les arguments suivants:
 copie du répertoire Documents de l'utilisateur sur le serveur 
@@ -33,7 +34,7 @@ le fichier de log porte le nom du PC sauvegardé, et il est incrémenté pour ga
 comment on lance le script
 ./scrip4.ps1 pour un lancement en manuel
 Pas d'argumentation à préciser 
-Les seuls modifications doivent etre l'heure , date de lancmeent. Il est de base fait pour etre excécuter par le planificateur de taches
+Les seuls modifications doivent etre l'heure , date de lancemeent. Il est de base fait pour etre excécuter par le planificateur de taches
 
 # Fabriqué 
 PowerShell
