@@ -14,7 +14,7 @@ PC sous Windows 10 Pro
 Utilisation de Robocopy pour effectuer la sauvegarde
 
 Utilistion du planificateur de taches pour lancer le script à une heure donnée
-
+***
 # Installation / Explication 
 étapes pour installer le script
 
@@ -32,20 +32,20 @@ Lancement de Robocopy avec les arguments suivants:
 copie du répertoire Documents de l'utilisateur sur le serveur 
 horodatage, chemin d'accès  et résultat détaillédans un journal sous \\SRVACME\sav$
 le fichier de log porte le nom du PC sauvegardé, et il est incrémenté pour garder un historique sur plusieurs jours
-
+***
 # Démarrage
 comment on lance le script
 ./scrip4.ps1 pour un lancement en manuel
 Pas d'argumentation à préciser 
 Les seuls modifications doivent etre l'heure , date de lancemeent. Il est de base fait pour etre excécuter par le planificateur de taches
-
+***
 # Fabriqué 
 PowerShell
 Visual Studio Code
-
+***
 # Contributeurs et Auteur
 REIFFSTECK Laurent Auteur 
 BINAND Olivier Mentor OpenClassrooms
-
+***
 # Licence
 libre de droit
