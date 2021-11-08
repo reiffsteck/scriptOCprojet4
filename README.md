@@ -5,11 +5,15 @@ sauvegarde des repertoires des utilisateurs de différents ordinateurs sur le se
 Ce script a été réalisé dans le cadre d'un projet "script 4" projet 7 pour OpenClassrooms
 ***
 # Pré-requis
-*serveur Windows 2019 avec Active Directory 
-*Création d'un répertoire caché sur un serveur \\SRVACME à la racine de préférence ,ce qui donne \\SRVACME\sav$
-*PC sous Windows 10 Pro
-*Utilisation de Robocopy pour effectuer la sauvegarde
-*Utilistion du planificateur de taches pour lancer le script à une heure donnée
+serveur Windows 2019 avec Active Directory 
+
+Création d'un répertoire caché sur un serveur \\SRVACME à la racine de préférence ,ce qui donne \\SRVACME\sav$
+
+PC sous Windows 10 Pro
+
+Utilisation de Robocopy pour effectuer la sauvegarde
+
+Utilistion du planificateur de taches pour lancer le script à une heure donnée
 
 # Installation / Explication 
 étapes pour installer le script
