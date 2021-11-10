@@ -7,7 +7,7 @@ param (
 Clear-host
 #recuperation du nom pc pour l'adresse de sauvegarde
 $nompc=[System.Environment]::MachineName
-#lecture des répertoires sous c:\users 
+#lecture des répertoires sous c:\users sans le répertoire Public
 $ListeRepertoire = Get-ChildItem -Path C:\Users -Exclude Public | Select-Object Name
 
 #boucle pour chaque répertoire représentant un utilisateur
@@ -16,7 +16,6 @@ $ListeRepertoire = Get-ChildItem -Path C:\Users -Exclude Public | Select-Object 
 foreach ($repertoires in $ListeRepertoire)
       {
         $nomuser = $repertoires.Name
-        Write-Host "coucou"
         Write-Host $ListeRepertoire
         Write-Host $repertoires
         Write-Host $nomuser
@@ -47,10 +46,9 @@ foreach ($repertoires in $ListeRepertoire)
           }
         
         #lancement de robocopy et sauvegarde de Documents
-        # la deuxième ligne peut servir pour sauvegarder les Favoris, au choix selon les cas
+        
         robocopy "c:\users\$nomuser\Documents" "\\SRVACME\sav$\$nompc\$nomuser\Documents" /V /FP /TS /LOG+:"\\SRVACME\sav$\$nompc.log" /TEE
-        #Start-Process -FilePath "c:\windows\system32\robocopy.exe" -ArgumentList "c:\users\$nomuser\Favoris \\SRVACME\sav$\$nompc /copy:DAT /E /TS /FP /V /LOG+:c:\$nompc.log /TEE " 
-
+        
       }
 
 
