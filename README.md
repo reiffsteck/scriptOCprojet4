@@ -17,9 +17,12 @@ Utilisation du planificateur de taches pour lancer le script à une heure donné
 ***
 # Démarrage
 comment on lance le script
-./scrip4.ps1 pour un lancement en manuel
+./script4.ps1 pour un lancement en silencieux  ./script4.ps1 > robo.txt pour récupérer le résultat
 Pas d'argumentation à préciser 
-Les seuls modifications doivent etre l'heure , date de lancemeent. Il est de base fait pour etre excécuter par le planificateur de taches
+
+Pour un lancement via le planificateur de tache de Windows.
+Les seuls modifications doivent etre l'heure , date de lancemeent. 
+
 ***
 # Installation / Explication 
 étapes pour installer le script
