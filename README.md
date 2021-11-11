@@ -33,8 +33,8 @@ Récupération du nom de l'ordinateur sur lequel fonctionne le script , grace à
 Récupération de la liste des répertoires sous c:\users, la liste de répertoires corespond à tous les noms des utilisateurs qui se sont connectés à l'ordinateur.
 Cela permet de ne pas oublier d'utilisateur.
 
-Boucle ForEach pour excécuter un test de validation de l'existence des répertoires de sauvegarde, sur le serveur \\SRVACME
-Si le test renvoi False , cela provoque la création du répertoire manquant
+Boucle ForEach pour lister les répertoires de sauvegarde, sur le serveur \\SRVACME
+Création du répertoire manquant ou non en mode -Force 
 Le répertoire est sur le serveur \\SRVACME\sav$\...
 Le répertoire est caché.
 
