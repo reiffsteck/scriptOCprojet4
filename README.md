@@ -16,11 +16,12 @@ Utilisation de Robocopy pour effectuer la sauvegarde.
 Utilisation du planificateur de taches pour lancer le script à une heure donnée.
 ***
 # Démarrage
-comment on lance le script
+on lance le script depuis un ordinateur sous Windows 10.
+
 ./script4.ps1 pour un lancement en silencieux  ./script4.ps1 > robo.txt pour récupérer le résultat
 Pas d'argumentation à préciser 
 
-Pour un lancement via le planificateur de tache de Windows.
+Pour un lancement via le planificateur de tache de Windows 10.
 Les seuls modifications doivent etre l'heure , date de lancemeent. 
 
 ***
