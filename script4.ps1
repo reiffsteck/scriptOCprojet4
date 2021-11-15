@@ -16,7 +16,8 @@ foreach ($repertoires in $ListeRepertoire)
     
     if($Error.Count -ieq 0)
             {
-                Write-Host "Tout est correct"
+                Write-Host "Tout est correct" $error[0]
+                $LastExitCode
             }
 
             Else
