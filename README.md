@@ -42,6 +42,9 @@ Lancement de Robocopy avec les arguments suivants:
 copie du répertoire Documents de l'utilisateur sur le serveur 
 horodatage, chemin d'accès  et résultat détaillédans un journal sous \\SRVACME\sav$
 le fichier de log porte le nom du PC sauvegardé, et il est incrémenté pour garder un historique sur plusieurs jours
+
+Ajout d'une condition, qui teste s'il y a une erreur dans le déroulement du script.
+Elle renvoi un code ok , si tout c'est dérouler correctement, ou un code 1 en cas d'erreur, avec l'explication de l'erreur $error[0] et éventuellement le code de la commande incorrecte, renvoi les Exit Code de la commande. 
 ***
 
 # Fabriqué 
